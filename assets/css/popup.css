@@ -1,0 +1,272 @@
+.popup .pop_box.pop_box--min {
+    min-width: 36rem;
+}
+.popup .pop_box.pop_box--mid {
+    width: 72rem;
+}
+.popup .pop_box .pop_body .pop_content .pop_input {
+    flex-direction: column;
+}
+.popup .pop_box .pop_body .pop_content .pop_input > div {
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 0;
+}
+.popup .pop_box .pop_body .pop_content .pop_input > div ~ div {
+    margin-top: 1rem;
+}
+.popup .pop_box .pop_body .pop_content .pop_input label {
+    text-align: left;
+}
+.popup .pop_box .pop_body .pop_content .pop_input .input {
+    width: 20rem;
+}
+.txt_center {
+    text-align: center;
+}
+
+/* ================================================== popup--select ================================================== */
+.pop_content .select {
+    width: calc(100% - 12rem);
+}
+
+/* ================================================== popup--input ================================================== */
+.popup .input_wrap ~ .input_wrap {
+    margin-top: 1rem;
+    padding-top: 2rem;
+    border-top: var(--border);
+}
+.input_wrap > div input:has(~ .input),
+.input_wrap > div input ~ .input {
+    width: calc((100% - 12rem) / 2);
+}
+.input_wrap > div input ~ .input {
+    border-left: 0;
+}
+.input_val_center .input {
+    font-weight: 300;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.input_val_center > div:has(.input) {
+    position: relative;
+}
+.input_val_center > div:has(.input)::after,
+.input_val_center > div:has(.input)::before {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    min-width: 1.6rem;
+    height: 1.6rem;
+    color: #aaa;
+    font-weight: 200;
+    font-size: 1.4rem;
+    text-align: right;
+    transform: translateY(-50%);
+}
+.input_val_center > div:has(.input)::before {
+    right: 34%;
+}
+.input--temp::after {
+    content: "\2103";
+}
+.input--bp::after {
+    content: "DBP";
+}
+.input--bp::before {
+    content: "SBP";
+}
+.input--pulse::after {
+    content: "Pulse";
+}
+.input--bs::after {
+    content: "mg/dL";
+}
+.input--height::after {
+    content: '"';
+}
+.input--height::before {
+    content: "'";
+}
+.input--kg::after {
+    content: "kg";
+}
+.input_wrap.input_val_center > .full_width {
+    width: 100%;
+    margin-right: 0;
+}
+.input_val_center .textarea {
+    width: 56rem;
+    height: 12rem;
+    border: var(--border);
+    resize: none;
+}
+
+.popup .pop_box .pop_body .pop_content .con_input .pop_input .input {
+    width: 100%;
+    max-width: unset;
+    height: 3rem;
+    padding: 0 1rem;
+    line-height: 2.8rem;
+    border: var(--border);
+    resize: none;
+}
+.popup .pop_box .pop_body .pop_content .con_input .input--file > input[type="file"] {
+    padding-right: 3rem;
+}
+.pop_input .textarea {
+    width: calc(100% - 12rem);
+    height: 6rem;
+    border: var(--border);
+}
+.pop_input .textarea::-webkit-scrollbar {
+    display: none;
+}
+/* ================================================== popup--con_box ================================================== */
+.pop_box--mid .pop_content:has(.con_box_half) {
+    display: flex;
+    justify-content: space-between;
+}
+.pop_box--mid .con_box_half {
+    width: calc(50% - 1rem);
+}
+.pop_box--mid .con_box .con_content {
+    height: auto;
+    overflow: initial;
+}
+.pic_preview {
+    width: 100%;
+    padding: 1rem;
+    border: var(--border);
+}
+.pic_preview p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 15.25rem;
+}
+.pic_preview span {
+    display: block;
+    color: #aaa;
+}
+.pic_preview:has(img) span {
+    display: none;
+}
+.pic_preview ~ .input--file {
+    margin-bottom: 4rem;
+}
+
+/* ================================================== con--list ================================================== */
+.con--list li {
+    width: 100%;
+    height: 3.7rem;
+    border: var(--border);
+}
+.con--list li ~ li {
+    margin-top: 1rem;
+}
+.con--list button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+.con--list button:focus {
+    background-color: var(--color-table-hover);
+}
+.con--list button > span,
+.con--list button > p {
+    font-weight: 300;
+}
+.con--list button > span {
+    margin-right: 1rem;
+}
+.con--list button > p {
+    max-width: 16.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.con--list button .tooltip {
+    position: absolute;
+    top: 3rem;
+    right: -1rem;
+    z-index: 10;
+    display: none;
+    max-width: 75%;
+    padding: 0.5rem;
+    color: #767676;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 125%;
+    text-align: left;
+    background: var(--color-table-hover);
+    border: var(--border);
+    pointer-events: none;
+}
+
+/* ================================================== error_txt ================================================== */
+.required > div:has(.error_txt) {
+    position: relative;
+    margin-bottom: 1rem;
+}
+.required > div .input {
+    height: 3rem;
+}
+.error_txt {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+    display: none;
+    color: #ff5e5e;
+    font-size: 1rem;
+    line-height: 150%;
+}
+.pop_input:has(.pic_preview) .error_txt {
+    bottom: -3.5rem;
+}
+.error_txt.act {
+    display: block;
+}
+
+/* ================================================== popup--button ================================================== */
+.input_wrap > div:has(.btn_box--full_width) {
+    width: 100%;
+}
+.btn_box--full_width > button {
+    min-width: 9.5rem;
+    height: 3rem;
+    padding: 0 1rem;
+    background: var(--color-light);
+    border: var(--border);
+}
+.btn_box--full_width > button ~ button {
+    margin-left: 1rem;
+}
+.btn_box--full_width > button > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn_box--full_width > button > span::after {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-left: 1rem;
+    content: "";
+}
+.btn--request > span::after {
+    background: url("../images/inspection.svg") no-repeat center;
+}
+.btn--presc > span::after {
+    background: url("../images/prescription.svg") no-repeat center;
+}
+.btn--inspec > span::after {
+    background: url("../images/med_certifi.svg") no-repeat center;
+}

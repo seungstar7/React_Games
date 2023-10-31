@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+/* ================================================== form--preview ================================================== */
+.form--preview { display: flex; width : 148mm; height : 209.8mm; padding: 3rem; box-sizing: border-box; transform: scale(1) translateY(0); transform-origin: 100% 50%; flex-direction: column; overflow: hidden; }
+/* form--01 */
+.form--01 .preview--head { padding-bottom: 2rem; border-bottom: 6px double #333; text-align: center; }
+.form--01 .preview--head > div { display: flex; justify-content: center; align-items: center; }
+.form--01 .preview--head--logo { display: inline-block; width: 9rem; max-width: 12rem; height: 3rem; max-height: 8rem; margin-right: 2rem; object-fit: contain; }
+.form--01 .preview--head--name { font-size: 2.4rem; font-weight: 800; }
+.form--01 .preview--head--txt {  margin-top: 1rem; color: #555; font-size: 1.4rem; font-weight: 200;  text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
+.form--01 .preview--body { height: 100%; }
+.form--01 .preview--body--info { display: flex; width: 100%; margin-top: 2rem; justify-content: space-between; flex-wrap: wrap; }
+.form--01 .preview--body--info > div { display: flex; width: 30%; }
+.form--01 .preview--body--info > div span { width: 6rem; padding-right: 1rem; box-sizing: border-box; font-size: 1.4rem;  font-weight: 400; line-height: 2rem; }
+.form--01 .preview--body--info > div p { width: calc(100% - 7rem);  border-bottom: 0.1rem solid #aaa;  margin-right: 2rem; font-size: 1.4rem;  font-weight: 200; line-height: 2rem; }
+.form--01 .preview--body--info > div:first-child { width: 100%; margin-bottom: 1rem; }
+.form--01 .preview--body--info > div:first-child span { width: 6rem; font-size: 1.6rem; }
+.form--01 .preview--body--info > div:first-child p { width: calc(100% - 7rem); margin-right: 0; font-size: 1.6rem; }
+.form--01 .preview--body--info > div:last-child { width: 40%; }
+.form--01 .preview--body--info > div:last-child p { margin-right: 0; }
+.form--01 .preview--body--con { height: 42rem; margin-top: 2rem; font-size: 1.8rem; line-height: 1.5; }
+.form--01 .preview--body--con::before { content: "Rx"; font-size: 4.8rem; font-weight:600; line-height: 1; }
+.form--01 .preview--body--con:has(*) { background-color: #fff; }
+.form--01 .preview--body--con > * { font-size: 1.8rem; line-height: 1.5; }
+.form--01 .preview--foot { display: flex; width: 100%; height: auto; justify-content: right;}
+.form--01 .preview--foot--info { margin-left: 2rem; justify-content: space-between; }
+.form--01 .preview--foot--info > div * { color: #555; }
+.form--01 .preview--foot--info > div ~ div { margin-top: 0.5rem; }
+.form--01 .preview--foot--info span { font-size: 1.4rem; font-weight: 700; }
+.form--01 .preview--foot--info p { display: inline-block; margin-left: 0.3rem; font-size: 1.4rem; font-weight: 200; }
+/* form--02 */
+.form--02 .preview--head { padding-bottom: 2rem; border-bottom: 1px solid #333; text-align: center; }
+.form--02 .preview--head--name { font-size: 2.4rem; font-weight: 800; }
+.form--02 .preview--head--txt {  margin-top: 1rem; color: #555; font-size: 1.4rem; font-weight: 200;  text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
+.form--02 .preview--body { height: 100%; }
+.form--02 .preview--body--info { display: flex; width: 100%; margin-top: 2rem; justify-content: space-between; }
+.form--02 .preview--body--info > div,
+.form--02 .preview--body--info p { display: flex; font-size: 1.6rem; font-weight: 200; }
+.form--02 .preview--body--info span { margin-right: 2rem; font-size: 1.6rem; font-weight: 600; }
+.form--02 .preview--body--con { min-height: 42rem; margin-top: 2rem; font-size: 1.4rem; line-height: 1.5; }
+.form--02 .preview--body--con::before { content: "Rx"; font-size: 4.8rem; font-weight:600; line-height: 1; }
+.form--02 .preview--body--con:has(*) { background-color: #fff; }
+.form--02 .preview--body--con > * { font-size: 1.4rem; font-weight: 300; line-height: 1.5; word-break: break-all; }
+.form--02 .preview--foot { display: flex; width: 100%; height: auto; border-top: 1px solid #333; padding-top: 2rem; margin-top: 2rem; box-sizing : border-box; }
+.form--02 .preview--foot--emb { width: 50%; height: 6.5rem; }
+.form--02 .preview--foot--emb > img { max-width: 90%; height: 100%; object-fit: contain;}
+.form--02 .preview--foot--info { width: 50%; height: 100%; margin-left: 2rem; justify-content: space-between; }
+.form--02 .preview--foot--info > div * { color: #555; }
+.form--02 .preview--foot--info > div ~ div { margin-top: 0.5rem; }
+.form--02 .preview--foot--info span { font-size: 1.4rem; font-weight: 700; }
+.form--02 .preview--foot--info p { display: inline-block; margin-left: 0.3rem; font-size: 1.4rem; font-weight: 200; }
+/* form--03 */
+.form--03 .preview--head { padding-bottom: 2rem; border-bottom: 2px solid #333; text-align: center; }
+.form--03 .preview--head > div { display: flex; justify-content: center; align-items: center; }
+.form--03 .preview--head--name { font-size: 2.4rem; font-weight: 800; }
+.form--03 .preview--head--txt {  margin-top: 1rem; color: #555; font-size: 1.4rem; font-weight: 200;  text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
+.form--03 .preview--body { height: 100%; }
+.form--03 .preview--body--info { display: flex; width: 100%; margin-top: 2rem; justify-content: space-between; flex-wrap: wrap; }
+.form--03 .preview--body--info > div { display: flex; width: 30%; }
+.form--03 .preview--body--info > div span { width: 6rem; padding-right: 1rem; box-sizing: border-box; font-size: 1.4rem;  font-weight: 400; line-height: 2rem; }
+.form--03 .preview--body--info > div p { width: calc(100% - 7rem);  border-bottom: 0.1rem solid #aaa;  margin-right: 2rem; font-size: 1.4rem;  font-weight: 200; line-height: 2rem; }
+.form--03 .preview--body--info > div:first-child { width: 100%; margin-bottom: 1rem; }
+.form--03 .preview--body--info > div:first-child span { width: 6rem; font-size: 1.6rem; }
+.form--03 .preview--body--info > div:first-child p { width: calc(100% - 7rem); margin-right: 0; font-size: 1.6rem; }
+.form--03 .preview--body--info > div:last-child { width: 40%; }
+.form--03 .preview--body--info > div:last-child p { margin-right: 0; }
+.form--03 .preview--body--impr { margin-top: 1rem; }
+.form--03 .preview--body--con { height: 44rem; margin-top: 2rem; font-size: 1.8rem; line-height: 1.5; overflow: hidden;}
+.form--03 .preview--body--con::before { content: "Rx"; font-size: 3.2rem; font-weight:600; line-height: 1; }
+.form--03 .preview--body--con:has(*) { background-color: #fff; }
+.form--03 .preview--body--con .presc--table { width: 100%; height: calc(100% - 3.5rem); border: 0.1rem solid #aaa; box-sizing: border-box; table-layout: fixed; border-collapse: collapse; }
+.form--03 .preview--body--con .presc--table th { height: 2.4rem; border-bottom: 0.1rem solid #aaa; font-size: 1.2rem; }
+.form--03 .preview--body--con .presc--table td { font-size: 1.4rem; text-align: center; word-break: break-all; }
+.form--03 .preview--body--con .presc--table th ~ th,
+.form--03 .preview--body--con .presc--table td ~ td { border-left: 0.1rem solid #aaa; }
+.form--03 .preview--body--con .presc--table tr ~ tr { border-top : 0.1rem solid #aaa }
+.form--03 .preview--foot { width: 100%; }
+.form--03 .preview--foot--info { display: flex; justify-content: space-between; }
+.form--03 .preview--foot--info > div * { color: #555; }
+.form--03 .preview--foot--info span { font-size: 1.4rem; font-weight: 700; }
+.form--03 .preview--foot--info p { display: inline-block; margin-left: 0.3rem; font-size: 1.4rem; font-weight: 200; }
+/* form--04 */
+.form--04 .preview--head { padding-bottom: 2rem; border-bottom: 6px double #333; text-align: center; }
+.form--04 .preview--head > div { display: flex; justify-content: center; align-items: center; }
+.form--04 .preview--head--logo { display: inline-block; width: 9rem; max-width: 12rem; height: 3rem; max-height: 8rem; margin-right: 2rem; object-fit: contain; }
+.form--04 .preview--head--name { font-size: 2.4rem; font-weight: 800; }
+.form--04 .preview--head--txt {  margin-top: 1rem; color: #555; font-size: 1.4rem; font-weight: 200;  text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
+.form--04 .preview--body { height: 100%; }
+.form--04 .preview--body--title { padding: 2rem 0; font-size: 1.8rem; font-weight: 700; text-align: center; }
+.form--04 .preview--body--info { display: flex; width: 100%; margin-top: 2rem; justify-content: space-between; }
+.form--04 .preview--body--info > div,
+.form--04 .preview--body--info p { display: flex; font-size: 1.6rem; font-weight: 200; }
+.form--04 .preview--body--info span { margin-right: 2rem; font-size: 1.6rem; font-weight: 600; }
+.form--04 .preview--body--con { height: 42rem; margin-top: 2rem; }
+.form--04 .preview--body--con:has(*) { background-color: #fff; }
+.form--04 .preview--body--con .medical--certificate { width: 100%; }
+.form--04 .preview--body--con .medical--certificate * { font-size: 1.4rem; line-height: 1.5 }
+.form--04 .preview--body--con .medical--certificate span { border-bottom: 0.1rem solid #aaa; padding: 0 1rem; }
+.form--04 .preview--body--con .medical--certificate p ~ p,
+.form--04 .preview--body--con .medical--certificate dl { margin-top: 2rem; }
+.form--04 .preview--body--con .medical--certificate dl dt { font-weight: 600; }
+.form--04 .preview--body--con .medical--certificate dl dd { display: block; border-bottom: 0.1rem solid #aaa; }
+.form--04 .preview--foot { display: flex; width: 100%; height: auto; padding-top: 2rem; box-sizing : border-box; }
+.form--04 .preview--foot--emb { width: 50%; height: 6.5rem; }
+.form--04 .preview--foot--emb > img { max-width: 90%; height: 100%; object-fit: contain;}
+.form--04 .preview--foot--info { margin-left: auto; }
+.form--04 .preview--foot--info > div * { color: #555; }
+.form--04 .preview--foot--info > div ~ div { margin-top: 0.5rem; }
+.form--04 .preview--foot--info span { font-size: 1.4rem; font-weight: 700; }
+.form--04 .preview--foot--info p { display: inline-block; margin-left: 0.3rem; font-size: 1.4rem; font-weight: 200; }
+/* form--05 */
+.form--05 .preview--head { padding-bottom: 2rem; border-bottom: 6px double #333; text-align: center; }
+.form--05 .preview--head > div { display: flex; justify-content: center; align-items: center; }
+.form--05 .preview--head--logo { display: inline-block; width: 9rem; max-width: 12rem; height: 3rem; max-height: 8rem; margin-right: 2rem; object-fit: contain; }
+.form--05 .preview--head--name { font-size: 2.4rem; font-weight: 800; }
+.form--05 .preview--head--txt {  margin-top: 1rem; color: #555; font-size: 1.4rem; font-weight: 200;  text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
+.form--05 .preview--body { height: 100%; }
+.form--05 .preview--body--title { padding: 2rem 0; font-size: 1.8rem; font-weight: 700; text-align: center; }
+.form--05 .preview--body--info { display: flex; width: 100%; margin-top: 2rem; justify-content: space-between; }
+.form--05 .preview--body--info > div,
+.form--05 .preview--body--info p { display: flex; font-size: 1.6rem; font-weight: 200; }
+.form--05 .preview--body--info span { margin-right: 2rem; font-size: 1.6rem; font-weight: 600; }
+.form--05 .preview--body--con { width: 100%; height: 40rem; overflow: hidden;}
+.form--05 .preview--body--con * { font-size: 1.4rem; line-height: 1.5 }
+.form--05 .preview--foot { display: flex; width: 100%; height: auto; padding-top: 2rem; box-sizing : border-box; }
+.form--05 .preview--foot--emb { width: 50%; height: 6.5rem; }
+.form--05 .preview--foot--emb > img { max-width: 90%; height: 100%; object-fit: contain;}
+.form--05 .preview--foot--info { margin-left: auto; }
+.form--05 .preview--foot--info > div * { color: #555; }
+.form--05 .preview--foot--info > div ~ div { margin-top: 0.5rem; }
+.form--05 .preview--foot--info span { font-size: 1.4rem; font-weight: 700; }
+.form--05 .preview--foot--info p { display: inline-block; margin-left: 0.3rem; font-size: 1.4rem; font-weight: 200; }

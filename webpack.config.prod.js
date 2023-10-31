@@ -20,15 +20,15 @@ module.exports = (env) => {
                 test: /\.js|\.jsx$/,
                 exclude: /node_modules/
             },
-            {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
-            },
-            {
-                test : /\.json$/,
-                use: ['json-loader'],
-                type: 'javascript/auto'
-            }]
+                {
+                    test: /\.css$/,
+                    use: ['style-loader', 'css-loader'],
+                },
+                {
+                    test : /\.json$/,
+                    use: ['json-loader'],
+                    type: 'javascript/auto'
+                }]
         },
         devServer: {
             port: 3000,
@@ -44,7 +44,7 @@ module.exports = (env) => {
         resolve: {
             alias: {
                 "@": path.resolve(__dirname, "./src/"),
-                // "/assets": path.resolve(__dirname, "./assets"),
+                "/assets": path.resolve(__dirname, "./assets"),
             },
             extensions:[".js",".jsx",".css", ".svg"]
         },
@@ -55,9 +55,14 @@ module.exports = (env) => {
             new CopyPlugin({
                 patterns: [
                     { from: './assets', to: './assets' }
+                    ,{ from: './config/prod.property.js', to: './property.js' }
                 ]
             }),
             new webpack.ProgressPlugin()
         ]
     }
 };
+
+
+
+
