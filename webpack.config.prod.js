@@ -55,7 +55,7 @@ module.exports = (env) => {
             new CopyPlugin({
                 patterns: [
                     { from: './assets', to: './assets' }
-                    ,{ from: './config/prod.property.js', to: './property.js' }
+                    // ,{ from: './config/prod.property.js', to: './property.js' }
                 ]
             }),
             new webpack.ProgressPlugin()
