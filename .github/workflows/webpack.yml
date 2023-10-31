@@ -25,5 +25,5 @@ jobs:
     - name: Build
       run: |
         npm install --save-dev --legacy-peer-deps
-        npx browserslist@latest --update-db
+        npx browserslist@latest --update
         npm run prod_build
