@@ -1,8 +1,6 @@
 name: NodeJS with Webpack
 
 on:
-  # step2 라는 브랜치에 커밋을 push할 때 마다 실행되도록 합니다.
-  on:
     push:
       branches: [ "main" ]
     pull_request:
