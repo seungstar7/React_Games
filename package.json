@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "webpack",
-    "deploy": "gh-pages -d docs",
+    "deploy": "gh-pages -d dist",
     "dev_build": "webpack --config webpack.config.js",
     "prod_build": "webpack --config webpack.config.prod.js",
     "start": "webpack serve",
