@@ -1,0 +1,178 @@
+/* ================================================== cndtn_box ================================================== */
+.cndtn_box {
+    position: relative;
+    display: flex;
+}
+.cndtn_box > div:not(.input--date--dbl):not(.btn_box),
+.cndtn_box .input--date--dbl > div {
+    width: 15rem;
+    height: 3rem;
+}
+.cndtn_box > div ~ div {
+    margin-left: 1rem;
+}
+.cndtn_box div > div,
+.cndtn_box div > input,
+.cndtn_box div > select {
+    width: 100%;
+    height: 100%;
+}
+.cndtn_box .input--date--dbl,
+.cndtn_box .input--date--dbl > div {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.cndtn_box .input--date--dbl > div ~ div {
+    margin-left: 2rem;
+}
+.cndtn_box .input--date--dbl > div ~ div::before {
+    position: absolute;
+    top: 50%;
+    left: -1.5rem;
+    font-size: 1.4rem;
+    transform: translateY(-50%);
+    content: "~";
+}
+.cndtn_box .input--date--dbl input[type="date"] {
+    text-align: left;
+}
+.cndtn_box .btn_box {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* cndtn_box_btn */
+.cndtn_box.cndtn_box_btn {
+    padding: 2rem 0 1rem;
+    border-top: var(--border);
+}
+.cndtn_box.cndtn_box_btn div.cndtn_box--input {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 25rem);
+    height: fit-content;
+}
+.cndtn_box.cndtn_box_btn div > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 24rem;
+}
+.cndtn_box--input > div {
+    margin: 0 4rem 1rem 0;
+}
+.cndtn_box--input > div:last-of-type {
+    margin-right: 0;
+}
+.cndtn_box--input label {
+    display: inline-block;
+    width: fit-content;
+    min-width: 8rem;
+    margin-right: 1rem;
+}
+.cndtn_box--input .input {
+    width: 12rem;
+    height: 3rem;
+}
+
+.cndtn_box.cndtn_box_btn div.cndtn_box--btn {
+    width: 25rem;
+    height: fit-content;
+}
+.cndtn_box--btn > .btn.btn_l {
+    float: right;
+    clear: both;
+    width: fit-content;
+    min-width: 12rem;
+}
+.cndtn_box--btn > .btn ~ .btn {
+    margin-top: 1rem;
+}
+
+/* ================================================== info_simpli_box ================================================== */
+.info_simpli_box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    border-top: var(--border);
+}
+.info_simpli_box dl {
+    display: flex;
+    flex: calc(100% / 3);
+    border-bottom: var(--border);
+}
+.info_simpli_box dl:nth-of-type(3n) {
+    border-right: var(--border);
+}
+.info_simpli_box dl * {
+    height: 3.4rem;
+    color: #555;
+    font-weight: 300;
+    line-height: 3.4rem;
+}
+.info_simpli_box dt {
+    width: 18rem;
+    font-size: 1.2rem;
+    text-align: center;
+    background: var(--color-light);
+    border-right: var(--border);
+    border-left: var(--border);
+}
+.info_simpli_box .info_simpli--point {
+    font-weight: 600;
+}
+.info_simpli_box dd {
+    display: flex;
+    justify-content: flex-end;
+    width: calc(100% - 18rem);
+    padding: 0 2rem;
+    font-size: 1.4rem;
+    background: var(--color-disabled);
+}
+.info_simpli_box dd > span {
+    margin-left: 0.5rem;
+}
+
+/* ================================================== info--table ================================================== */
+.info--table .table th,
+.info--table .table td {
+    height: 3.4rem;
+    border: var(--border);
+}
+.info--table .table th {
+    color: #555;
+    border-bottom: 0;
+}
+.info--table .table th > b {
+    color: #555;
+    font-weight: 700;
+}
+.info--table .table tr:first-of-type td {
+    border-top: 0;
+}
+.info--table .table tr:has(input:checked) {
+    background-color: var(--color-red--5per);
+}
+
+/* table--checkbox */
+.table .cb_td .label--checkbox {
+    position: relative;
+    display: inline-block;
+    width: 2.7rem;
+    height: 2.7rem;
+    background-color: #fff;
+    border: var(--border);
+    cursor: pointer;
+}
+.table .cb_td .label--checkbox:has(input:checked)::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url("../images/check.svg") no-repeat center;
+    transform: translate(-50%, -50%);
+    content: "";
+}
