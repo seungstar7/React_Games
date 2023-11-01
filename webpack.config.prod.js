@@ -12,7 +12,7 @@ module.exports = (env) => {
         devtool: 'eval-source-map',
         output: {
             filename: '[name].js', // [name]은 entry에서 정의한 키 값 (index 또는 dev.property)
-            path: path.resolve(__dirname, 'build'),
+            path: path.resolve(__dirname, 'dist'),
         },
         module:{
             rules:[{
@@ -44,7 +44,7 @@ module.exports = (env) => {
         resolve: {
             alias: {
                 "@": path.resolve(__dirname, "./src/"),
-                // "/assets": path.resolve(__dirname, "./assets"),
+                "/assets": path.resolve(__dirname, "./assets"),
             },
             extensions:[".js",".jsx",".css", ".svg"]
         },
