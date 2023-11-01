@@ -4,7 +4,7 @@ const GameMain = () => {
 
     const navigate = useNavigate();
     const fnNavi = ( e ) => {
-        navigate(`./${e.target.name}` )
+        navigate(`/game/${e.target.name}` )
 
     }
     return(
