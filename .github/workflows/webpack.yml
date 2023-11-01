@@ -1,14 +1,17 @@
 name: NodeJS with Webpack
 
 on:
+  # step2 라는 브랜치에 커밋을 push할 때 마다 실행되도록 합니다.
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [step2]
 
 jobs:
+  # deploy 라는 job 입니다.
+  # 안에는 배포에 필요한 과정들을 기술하면 됩니다!
   deploy:
     runs-on: ubuntu-latest # 우분투에서 실행
+    permissions:
+      contents: write
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
 
@@ -22,31 +25,10 @@ jobs:
           node-version: 18 # 버전은 입맛대로 바꾸세요
 
       - run: npm ci # package-lock.json 에 적혀있는 패키지를 그~대로 설치합니다.
-      - run: npm run prod_build # package.json에 빌드 스크립트를 여기 적으세요
+      - run: npm run build-step2 # package.json에 빌드 스크립트를 여기 적으세요
 
       # publish_dir에 들어있는 파일들을 gh-pages 브랜치에 올려줍니다.
       - uses: peaceiris/actions-main@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-  build:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-
-    steps:
-    - uses: actions/checkout@v3
-
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-
-    - name: Build
-      run: |
-        npm install --save-dev --legacy-peer-deps
-        npx browserslist@latest --update-db
-        npm run prod_build
-        npm start
