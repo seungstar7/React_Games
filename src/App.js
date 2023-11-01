@@ -7,6 +7,7 @@ import Matgo from '@/compnents/game/matGo/Matgo'
 const App = () => {
   return (
       <div className="App">
+          <GameMain/>
           <BrowserRouter>
               <Routes>
                   <Route path="/" element={<GameMain/>}></Route>

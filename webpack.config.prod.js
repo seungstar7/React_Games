@@ -15,11 +15,20 @@ module.exports = (env) => {
             path: path.resolve(__dirname, 'dist'),
         },
         module:{
-            rules:[{
-                loader: 'babel-loader',
-                test: /\.js|\.jsx$/,
-                exclude: /node_modules/
-            },
+            rules:[
+                {
+                    test: /\.(ts|js)x?$/i,
+                    exclude: /node_modules/,
+                    use: {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: [
+                                '@babel/preset-env',
+                                '@babel/preset-react'
+                            ],
+                        },
+                    },
+                },
                 {
                     test: /\.css$/,
                     use: ['style-loader', 'css-loader'],
@@ -31,15 +40,11 @@ module.exports = (env) => {
                 }]
         },
         devServer: {
+            host: 'localhost',
             port: 3000,
-            static: {
-                directory: path.join(__dirname, 'public'),
-            },
-            proxy: {
-                // '/api': 'http://dev2.ntd.co.kr/'
-                // '/api': 'http://localhost:8080/'
-            },
-            historyApiFallback: true, // router-dom 옵션
+            contentBase: './dist',
+            historyApiFallback: true,
+            open: true
         },
         resolve: {
             alias: {

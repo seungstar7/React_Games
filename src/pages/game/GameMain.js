@@ -1,10 +1,11 @@
 import React from 'react'
-import {Navigate, useNavigate} from 'react-router'
+// import {Navigate, useNavigate} from 'react-router'
 const GameMain = () => {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const fnNavi = ( e ) => {
-        navigate(`/game/${e.target.name}` )
+        console.log("wr")
+        // navigate(`/game/${e.target.name}` )
 
     }
     return(
