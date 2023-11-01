@@ -28,7 +28,7 @@ jobs:
       - run: npm run prod_build # package.json에 빌드 스크립트를 여기 적으세요
 
       # publish_dir에 들어있는 파일들을 gh-pages 브랜치에 올려줍니다.
-      - uses: peaceiris/actions-main@v3
+      - uses: actions-main@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
